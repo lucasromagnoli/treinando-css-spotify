@@ -1,1 +1,1 @@
-Projeto estatico para treinar o desenvolvimento de design responsivo
+Projeto estático para treinar o desenvolvimento de design responsivo
