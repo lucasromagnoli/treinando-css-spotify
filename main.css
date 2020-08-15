@@ -1,92 +1,43 @@
-html, body {
+/* 
+* background do meio: #242424
+* background da lateral: #181818
+* background do bottom: #404040
+*/
+
+*, html, body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    width: 100%;
     height: 100%;
-    padding: 0;
-    margin: 0;
+
+    --midle-color: #242424;
+    --side-color: #181818;
+    --bottom-color: #404040;
+    --letter-color: #B3B3B3;
+}
+
+body {
     font-family: 'Montserrat';
     font-size: 14px;
+    color: var(--letter-color);
 }
 
-.father-panel {
-    height: calc(100% - 60px);
-    width: 100%;
-    display: flex;
+.container-layout {
+    display: grid;
+    grid-template-columns: minmax(150px, 200px) minmax(600px, auto) minmax(200px, 300px);
+    grid-template-rows: auto minmax(75px, 100px);
 }
 
-.left-panel {
-    background-color: #181818;
-    height: 100%;
-    width: 10%;
-    min-width: 100px;
-    display: flex;
-    flex-direction: column;
+footer {
+    grid-column: 1 / 4;
 }
-
-.mid-panel {
-    background-color: #242424;
-    height: 100%;
-    width: 80%;
+sidebar {
+    background-color: var(--side-color);
 }
-
-.right-panel {
-    background-color: #181818;
-    height: 100%;
-    width: 10%;
-    min-width: 100px;
+section {
+    background-color: var(--midle-color);
 }
-
-.bottom-panel {
-    background-color: #404040;
-    width: 100%;
-    height: 60px;
-}
-
-.menu-options > ul {
-    color: #8D8D8D;
-    margin-bottom: 25px;
-    list-style-type: none;
-    padding: 0;
-    font-weight: bold;
-}
-
-.menu-options > ul > li {
-    margin-left: 20px;
-    margin-bottom: 15px;
-}
-
-.menu-options > .top {
-    font-size: 18px;
-}
-
-.menu-options > .top > li > span{
-    margin-right: 10px;
-}
-
-.menu-options > ul > .brand {
-    text-transform: uppercase;
-    font-size: 12px;
-    letter-spacing: 2.5px;
-}
-
-.menu-options > .mid {
-    color: #B3B3B3;
-}
-
-.playlist {
-    border-top: #404040 solid 1px;
-    padding-top: 20px;
-    color: #B3B3B3;
-}
-
-.playlist > img {
-    margin-top: 20px;
-    width: 100%;
-    height: 100%;
-}
-
-.mid-panel > .topbar {
-    height: 8%;
-    color: #dadada;
-    display: flex;
-    justify-content: space-between;
-    margin: 12px 25px 0px 25px;
+footer {
+    background-color: var(--bottom-color);
 }
